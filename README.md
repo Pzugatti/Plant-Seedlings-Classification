@@ -1,5 +1,5 @@
-# Plant-Seedling-Recognition
-The aim of this project is to recognize the plant seedling on the farm and this is a classification task by using supervised learning technique.
+# Plant-Seedlings-Classification
+The aim of this project is to classify the plant seedling on the farm by using a supervised learning technique.
 
 The data-set is available on Kaggle : (https://www.kaggle.com/c/plant-seedlings-classification/data).
 
