@@ -1,5 +1,7 @@
 # Plant-Seedling-Recognition
-The aim of this project is to recognize the plant seedling on the farm and the data-set is available on Kaggle (https://www.kaggle.com/c/plant-seedlings-classification/data).
+The aim of this project is to recognize the plant seedling on the farm and this is a classification task by using supervised learning technique.
+
+The data-set is available on Kaggle : (https://www.kaggle.com/c/plant-seedlings-classification/data).
 
 
 ## Data-set examination
@@ -14,10 +16,12 @@ The data-set is split into two group, which are training and testing data.
 According to the above graph, the highest number of the plant is Loose-Silky-Bent, and the lowest number of the plants are Maize and Common Wheat.
 
 
-## Pre-processing image
+## Pre-processing dataset
 The training and testing images have been processed by using OpenCV libraries that extracted the plant seedling only and removed the background noise. The filtering process depending on the HSV values, retaining green HSV parameters and convert back to RGB format, which means only the green colour remains and the rest of the colour are removed. The pre-processed image has been shown below:
 
 ![xtrain_image_processing](https://user-images.githubusercontent.com/43289100/46004555-c6ca7180-c0e5-11e8-895d-0ab270471a8b.png)
+
+Then the training and testing dataset have been normalized by dividing 255.0 to limit the pixel values within 0 to 1 and the labels are one-hot-encoded.
 
 
 ## Convolutional neural network (CNN)
@@ -33,14 +37,14 @@ CNN is a good choice while dealing with the image data. Designed CNN architectur
 
 The validation data-set is getting from the training data-set. For instance, the 100% training data-set split out its 10% data-set as validation data-set, which means 10 % treat as validation data-set and 90% treat as training data-set.
 
-According to the confusion matrix, Sugar Beet and Black-Grass have misclassified obviously. There are 10 samples of Sugar Beet misclassified as Black-Grass, and 7 samples of Black-Grass misclassified as Sugar Beet. This means both plant images may having similar features that confuse the CNN model. The solution could be getting more data-set, apply alternative image processing techniques, more data augmentation or modified or change the current CNN.
+According to the confusion matrix, Sugar Beet and Black-Grass have misclassified obviously after the validation and training data-set fit into CNN model. There are 10 samples of Sugar Beet misclassified as Black-Grass, and 7 samples of Black-Grass misclassified as Sugar Beet. This means both plant images may having similar features that confuse the CNN model. The solution could be getting more data-set, apply alternative image processing techniques, more data augmentation or modified or change the current CNN.
 
 ![loss_acc_curve](https://user-images.githubusercontent.com/43289100/46009861-5fb3b980-c0f3-11e8-84a7-e96a491f37ce.png)
 
 Above graph showing the loss and accuracy of the training and validation data after both data-set fittings into the model. The x-axis is the epoch, the loss is decreasing and accuracy is increasing when epoch getting larger. At the end of the epoch, the validation accuracy is greater than the training accuracy that means the model doesn't overfit.
 
 
-## Predict unseen data (testing data)
+## Predict unseen data-set (testing data-set)
 ![kaggle_result](https://user-images.githubusercontent.com/43289100/46010578-c76b0400-c0f5-11e8-8d9e-b4ea9b19d403.PNG)
 Above picture was getting from my Kaggle competition result. The trained model predicted the unseen data and the result shows 0.91939(92%) accuracy. The remaining 8% (100%- 92%) could be the Sugar Beet,Black-Grass, and a small number of other plants have misclassified.
 
