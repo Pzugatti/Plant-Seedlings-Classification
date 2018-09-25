@@ -3,26 +3,29 @@ The aim of this project is to recognize the plant seedling on the farm and the d
 
 
 ## Data-set examination
-There are 12 species in the data-set which are shown below:
+### There are 12 species in the data-set which are shown below:
+<p align="center">
 ![xtrain_plant](https://user-images.githubusercontent.com/43289100/45993669-87d6f480-c0c2-11e8-86e7-cb5113af196b.png)
+</p>
 The data-set is split into two group, which are training and testing data.
 
-Graphic visualizes the total number for each species: 
-
+### Graphic visualizes the total number for each species: 
+<p align="center">
 ![no_species](https://user-images.githubusercontent.com/43289100/45995997-20727200-c0cd-11e8-8d1b-3b3ecfbbfbab.png)
-
+</p>
 According to the above graph, the highest number of the plant is Loose-Silky-Bent, and the lowest number of the plants are Maize and Common Wheat.
 
 
 ## Pre-processing image
 The training and testing images have been processed by using OpenCV libraries that extracted the plant seedling only and removed the background noise. The filtering process depending on the HSV values, retaining green HSV parameters and convert back to RGB format, which means only the green colour remains and the rest of the colour are removed. The pre-processed image has been shown below:
+
 ![xtrain_image_processing](https://user-images.githubusercontent.com/43289100/46004555-c6ca7180-c0e5-11e8-895d-0ab270471a8b.png)
 
 
 ## Convolutional neural network (CNN)
 CNN is a good choice while dealing with the image data. Designed CNN architecture (26 layers) based on personal experience, knowledge and, most important, the machine learning community and forum help. The time spent a lot on tuning hyper-parameters in order to achieve higher accuracy and lower residual for model training. So that model predicting the unseen data will have a higher chance to obtain the correct result. Of course, there is plenty of other powerful CNN available such as AlexNet, ResNet and more, those networks may also suitable applying in this data-set.
 
-Model visualization:
+### Model visualization:
 
 ![model](https://user-images.githubusercontent.com/43289100/46008456-64766e80-c0ef-11e8-9eb9-013068d8bc9f.png)
 
@@ -35,12 +38,13 @@ The validation data-set is getting from the training data-set. For instance, the
 According to the confusion matrix, Sugar Beet and Black-Grass have misclassified obviously. There are 10 samples of Sugar Beet misclassified as Black-Grass, and 7 samples of Black-Grass misclassified as Sugar Beet. This means both plant images may having similar features that confuse the CNN model. The solution could be getting more data-set, apply alternative image processing techniques, more data augmentation or modified or change the current CNN.
 
 ![loss_acc_curve](https://user-images.githubusercontent.com/43289100/46009861-5fb3b980-c0f3-11e8-84a7-e96a491f37ce.png)
+
 Above graph showing the loss and accuracy of the training and validation data after both data-set fittings into the model. The x-axis is the epoch, the loss is decreasing and accuracy is increasing when epoch getting larger. At the end of the epoch, the validation accuracy is greater than the training accuracy that means the model doesn't overfit.
 
 
 ## Predict unseen data (testing data)
 ![kaggle_result](https://user-images.githubusercontent.com/43289100/46010578-c76b0400-c0f5-11e8-8d9e-b4ea9b19d403.PNG)
-Above picture is getting from my Kaggle competition result. The trained model predicted the unseen data and the result shows 0.91939(92%) accuracy. The remaining 8% (100%- 92%) could be the Sugar Beet,Black-Grass, and a small number of other plants have misclassified.
+Above picture was getting from my Kaggle competition result. The trained model predicted the unseen data and the result shows 0.91939(92%) accuracy. The remaining 8% (100%- 92%) could be the Sugar Beet,Black-Grass, and a small number of other plants have misclassified.
 
 
 ## Summary
