@@ -59,5 +59,7 @@ This Kaggle competition is challenging at least for me, because I just started t
 
 # Working Enviroment
 Google Colab
-
+  -Keras 2.1.6
+  -Opencv 3.4.3
+  -sklearn 0.19.2
 
