@@ -4,15 +4,13 @@ The aim of this project is to recognize the plant seedling on the farm and the d
 
 ## Data-set examination
 ### There are 12 species in the data-set which are shown below:
-<p align="center">
 ![xtrain_plant](https://user-images.githubusercontent.com/43289100/45993669-87d6f480-c0c2-11e8-86e7-cb5113af196b.png)
-</p>
 The data-set is split into two group, which are training and testing data.
 
 ### Graphic visualizes the total number for each species: 
-<p align="center">
+
 ![no_species](https://user-images.githubusercontent.com/43289100/45995997-20727200-c0cd-11e8-8d1b-3b3ecfbbfbab.png)
-</p>
+
 According to the above graph, the highest number of the plant is Loose-Silky-Bent, and the lowest number of the plants are Maize and Common Wheat.
 
 
