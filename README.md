@@ -57,10 +57,10 @@ The Sugar Beet and Black-Grass misclassified after training causes the model una
 This Kaggle competition is challenging at least for me, because I just started to study this deep learning field a few months ago. I 'google' numerous blog,forum, documentation and more in order to let myself having intuition understanding how does deep learning work. Still, there are too many knowledge and techniques almost make me feels overwhelming. Anyway, it is great experience to know how to build a simple CNN and gain the significant skills. Even though deep learning network is quite hard to master, however, it could solve the real world problems, which make me feels exciting and motivating!
 
 
-# Working Enviroment
+# Working enviroment
 Google Colab
-  -Keras 2.1.6
-  -Python 3
-  -Opencv 3.4.3
-  -sklearn 0.19.2
+  - Keras 2.1.6
+  - Python 3
+  - Opencv 3.4.3
+  - sklearn 0.19.2
 
