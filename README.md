@@ -44,6 +44,8 @@ According to the confusion matrix, Sugar Beet and Black-Grass have misclassified
 
 ![loss_acc_curve](https://user-images.githubusercontent.com/43289100/46009861-5fb3b980-c0f3-11e8-84a7-e96a491f37ce.png)
 
+![cnn_result](https://user-images.githubusercontent.com/43289100/46395204-365fe280-c71e-11e8-8007-6068da075522.PNG)
+
 Above graph showing the loss and accuracy of the training and validation data after both data-set fittings into the model. The x-axis is the epoch, the loss is decreasing and accuracy is increasing when epoch getting larger. At the end of the epoch, the validation accuracy is greater than the training accuracy that means the model doesn't overfit.
 
 
