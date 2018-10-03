@@ -1,5 +1,5 @@
 # Plant-Seedlings-Classification
-The aim of this project is to classify the plant seedling on the farm by using a supervised learning technique.
+The aim of this project is to use deep learning model to classify the plant seedling by using a supervised learning technique.
 
 The data-set is available on Kaggle : (https://www.kaggle.com/c/plant-seedlings-classification/data).
 
@@ -7,9 +7,12 @@ The data-set is available on Kaggle : (https://www.kaggle.com/c/plant-seedlings-
 ## Data-set examination
 ### There are 12 species in the data-set which are shown below:
 ![xtrain_plant](https://user-images.githubusercontent.com/43289100/45993669-87d6f480-c0c2-11e8-86e7-cb5113af196b.png)
+
 The data-set is split into two group, which are training and testing data.
 
 ### Graphic visualizes the total number for each species: 
+
+![totalnum_species](https://user-images.githubusercontent.com/43289100/46394342-707bb500-c71b-11e8-97b1-8a3260c4c16d.PNG)
 
 ![no_species](https://user-images.githubusercontent.com/43289100/45995997-20727200-c0cd-11e8-8d1b-3b3ecfbbfbab.png)
 
@@ -25,7 +28,7 @@ Then the training and testing dataset have been normalized by dividing 255.0 to 
 
 
 ## Convolutional neural network (CNN)
-CNN is a good choice while dealing with the image data. Designed CNN architecture (26 layers) based on personal experience, knowledge and, most important, the machine learning community and forum help. The time spent a lot on tuning hyper-parameters in order to achieve higher accuracy and lower residual for model training. So that model predicting the unseen data will have a higher chance to obtain the correct result. Of course, there is plenty of other powerful CNN available such as AlexNet, ResNet and more, those networks may also suitable applying in this data-set.
+CNN is a good choice while dealing with the image data. Designed CNN architecture based on personal experience, knowledge and, most important, the machine learning community and forum helps. The time spent a lot on tuning the model hyper-parameters in order to achieve higher accuracy and lower residual for model training. So that the model predicting the unseen data will have a higher chance to obtain the correct result. Of course, there is plenty of other powerful CNN available such as AlexNet, ResNet and more, those networks may also suitable applying in this data-set.
 
 ### Model visualization:
 
